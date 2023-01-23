@@ -1,0 +1,15 @@
+*.aux
+*.cb
+*.cb2
+*.log
+*.out
+*.bbl
+*.blg
+*.lof
+*.toc
+*.lot
+*~
+*/*.aux
+*.xml
+.DS_Store
+SPenaMartinez_Thesis.pdf
