@@ -7,12 +7,16 @@ jobs:
     steps:
       - name: checkout repository
         uses: actions/checkout@v2
-      - run: |
-          pdflatex SPenaMartinez_Thesis.tex
-          bibtex SPenaMartinez_Thesis
-          pdflatex SPenaMartinez_Thesis.tex
-          pdflatex SPenaMartinez_Thesis.tex
-      - uses: actions/upload-artifact@v2
+          #- run: |
+          #    pdflatex SPenaMartinez_Thesis.tex
+          #    bibtex SPenaMartinez_Thesis
+          #    pdflatex SPenaMartinez_Thesis.tex
+          #    pdflatex SPenaMartinez_Thesis.tex
+          #- uses: actions/upload-artifact@v2
+          #  with:
+          #    name: thesis_pdf
+          #    path: SPenaMartinez_Thesis.pdf
+      - name: Compile LaTeX document
+        uses: xu-cheng/latex-action@v2
         with:
-          name: thesis_pdf
-          path: SPenaMartinez_Thesis.pdf
+          root_file: SPenaMartinez_Thesis.tex
